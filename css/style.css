@@ -1,0 +1,91 @@
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,300italic);
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+body {
+    font-family: "Lato", sans-serif;
+}
+
+.jumbotron {
+    font-family: "Merriweather", serif;
+    background: linear-gradient( rgba(19, 62, 104, 0.61), rgba(19, 62, 104, 0.61)), url('../img/jumbotron-background.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 0px;
+}
+
+.jumbotron h1 {
+    font-style: italic;
+    font-weight: 300;
+    font-size: 60px;
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+
+.jumbotron .btn {
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-bottom: 5px;
+    background: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 2px solid;
+    margin-bottom: 50px;
+}
+
+.jumbotron .btn:hover {
+    color: rgb(166, 166, 166);
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+ul.navbar-nav > li > a {
+    color: white;
+    font-family: "Lato";
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+ul.navbar-nav > li >a:hover {
+    background: rgba(19, 62, 104, 0.61);
+}
+
+ul.navbar-nav>li.active {
+    background: none;
+    border: none;
+    border-radius: 0px;
+    border-bottom: 1px solid;
+}
+
+.col-md-4.selector {
+    background: rgba(19, 62, 104, 1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+ul.tabs {
+    list-style-type: none;
+    padding: 0px;
+    text-align: center;
+    font-family: "Lato";
+}
+
+ul.tabs li {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+ul.tabs li>a {
+    color: white;
+    font-size: 15px;
+}
+
+ul.tabs li>a.active>.selector {
+    background: white;
+    color: rgba(19, 62, 104, 1);
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}

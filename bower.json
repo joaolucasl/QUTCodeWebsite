@@ -1,0 +1,12 @@
+{
+  "name": "qut-code-website",
+  "description": "QUTCode website",
+  "version": "0.0.1",
+  "authors":[
+     "Joao Lucas Lucchetta"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "pixeden-stroke-7-icon": "~1.2.3"
+  }
+}

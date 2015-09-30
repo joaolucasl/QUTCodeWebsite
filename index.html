@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="vendor/pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+
+<body>
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <nav class="navbar">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="pe-7s-angle-down pe-3x"></i>
+                    </button>
+                    <a class="navbar-brand" href="#"><img src="img/QUTCodeLogo_white.png" alt="QUTCode  "></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a href="#">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <!--/.navbar-collapse -->
+            </div>
+        </nav>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h1>Build whatever you want,
+                    as long as it's awesome.</h1>
+                    <p><a class="btn btn-primary btn-lg" href="#" role="button">KNOW MORE</a></p>
+                </div>
+            </div>
+            <div class="row tab-selector">
+                <ul class='tabs'>
+                    <li>
+                        <a href='#education'>
+                            <div class="col-md-4 selector">
+                                <i class="pe-7s-study pe-2x pe-va"></i> EDUCATION
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#news'>
+                            <div class="col-md-4 selector">
+                                <i class="pe-7s-news-paper pe-2x pe-va"></i> NEWS AND EVENTS
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href='#objectives'>
+                            <div class="col-md-4 selector">
+                                <i class="pe-7s-target pe-2x pe-va"></i> OBJECTIVES
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row" id='education'>
+            <div class="col-md-12">
+
+                <h1>EDUCATION</h1>
+            </div>
+
+        </div>
+        <div class="row" id='news'>
+            <div class="col-md-12">
+
+                <h1>NEWS</h1>
+            </div>
+
+        </div>
+        <div class="row" id='objectives'>
+            <div class="col-md-12">
+
+                <h1>OBJECTIVES</h1>
+            </div>
+
+        </div>
+        <hr>
+
+        <footer>
+            <p>© Company 2014</p>
+        </footer>
+    </div>
+    <!-- /container -->
+    <script src="vendor/jquery/dist/jquery.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        //---->  Code for dynamic tabs
+
+        $("ul.tabs").each(function () {
+            var a, b, c = $(this).find("a");
+            a = $(c.filter('[href="' + location.hash + '"]')[0] || c[1]);
+            a.addClass("active");
+            b = $(a[0].hash);
+            c.not(a).each(function () {
+                $(this.hash).hide()
+            });
+            $(this).on("click", "a", function (d) {
+                a.removeClass("active");
+                b.hide();
+                a = $(this);
+                b = $(this.hash);
+                a.addClass("active");
+                b.show();
+                d.preventDefault()
+            })
+        });
+    </script>
+</body>
+
+
+</html>
