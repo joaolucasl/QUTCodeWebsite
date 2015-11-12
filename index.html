@@ -1,127 +1,223 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="vendor/pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/pixeden-stroke-7-icon/pe-icon-7-stroke/dist/pe-icon-7-stroke.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 
 <body>
 
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-        <nav class="navbar">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="pe-7s-angle-down pe-3x"></i>
-                    </button>
-                    <a class="navbar-brand" href="#"><img src="img/QUTCodeLogo_white.png" alt="QUTCode  "></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <!--/.navbar-collapse -->
-            </div>
-        </nav>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-8">
-                    <h1>Build whatever you want,
-                    as long as it's awesome.</h1>
-                    <p><a class="btn btn-primary btn-lg" href="#" role="button">KNOW MORE</a></p>
-                </div>
-            </div>
-            <div class="row tab-selector">
-                <ul class='tabs'>
-                    <li>
-                        <a href='#education'>
-                            <div class="col-md-4 selector">
-                                <i class="pe-7s-study pe-2x pe-va"></i> EDUCATION
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href='#news'>
-                            <div class="col-md-4 selector">
-                                <i class="pe-7s-news-paper pe-2x pe-va"></i> NEWS AND EVENTS
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href='#objectives'>
-                            <div class="col-md-4 selector">
-                                <i class="pe-7s-target pe-2x pe-va"></i> OBJECTIVES
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <i class="pe-7s-angle-down pe-3x"></i>
+          </button>
+          <a class="navbar-brand" href="#"><img src="img/QUTCodeLogo_white.png" alt="QUTCode  "></a>
         </div>
-    </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#">Home</a></li>
 
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <!--/.navbar-collapse -->
+      </div>
+    </nav>
     <div class="container">
-        <!-- Example row of columns -->
-        <div class="row" id='education'>
-            <div class="col-md-12">
-
-                <h1>EDUCATION</h1>
-            </div>
-
+      <div class="row">
+        <div class="col-md-8">
+          <h1>Build whatever you want,
+                    as long as it's awesome.</h1>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">KNOW MORE</a></p>
         </div>
-        <div class="row" id='news'>
-            <div class="col-md-12">
+      </div>
+      <div class="row tab-selector">
+        <ul class='tabs'>
+          <li>
+            <a href='#education'>
+              <div class="col-sm-4 selector">
+                <i class="pe-7s-study pe-2x pe-va"></i> EDUCATION
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href='#objectives'>
+              <div class="col-sm-4 selector">
+                <i class="pe-7s-target pe-2x pe-va"></i> OBJECTIVES
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href='#news'>
+              <div class="col-sm-4 selector">
+                <i class="pe-7s-news-paper pe-2x pe-va"></i> NEWS AND EVENTS
+              </div>
+            </a>
+          </li>
 
-                <h1>NEWS</h1>
-            </div>
-
-        </div>
-        <div class="row" id='objectives'>
-            <div class="col-md-12">
-
-                <h1>OBJECTIVES</h1>
-            </div>
-
-        </div>
-        <hr>
-
-        <footer>
-            <p>© Company 2014</p>
-        </footer>
+        </ul>
+      </div>
     </div>
-    <!-- /container -->
-    <script src="vendor/jquery/dist/jquery.min.js"></script>
-    <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-        //---->  Code for dynamic tabs
+  </div>
 
-        $("ul.tabs").each(function () {
-            var a, b, c = $(this).find("a");
-            a = $(c.filter('[href="' + location.hash + '"]')[0] || c[1]);
-            a.addClass("active");
-            b = $(a[0].hash);
-            c.not(a).each(function () {
-                $(this.hash).hide()
-            });
-            $(this).on("click", "a", function (d) {
-                a.removeClass("active");
-                b.hide();
-                a = $(this);
-                b = $(this.hash);
-                a.addClass("active");
-                b.show();
-                d.preventDefault()
-            })
-        });
-    </script>
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row" id='education'>
+      <div class="col-md-12">
+        <div class="col-md-6 hidden-xs hidden-sm" style="text-align:center">
+
+          <span class="icon">
+  <i class="pe-7s-cloud-download"></i>
+            +
+          <i class="pe-7s-study"></i>
+          <br>
+          <h2 class="section-header"> = Awesomeness</h2>
+          </span>
+
+        </div>
+        <div class="col-md-6" style="">
+
+          <h1 class="section-header">EDUCATION</h1>
+          <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.Efficiently unleash cross-media information without cross-media value. Quickly maximize timely deliverables for real-time schemas. Dramatically maintain clicks-and-mortar solutions without functional solutions. Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. Dynamically innovate resource-leveling customer service for state of the art customer service.</p>
+        </div>
+      </div>
+
+    </div>
+    <div class="row" id='objectives'>
+      <div class="col-md-12 text-center">
+        <img src="img/rocket_cloud_glyph.png" class="img-responsive center-block">
+        <h1 class="section-header">Transforming students into <br class="hidden-xs"> world-class developers</h1>
+      </div>
+      <div class="col-md-12" style="padding-top:30px;">
+        <div class="col-md-4 objective">
+          <span class="icon">
+                        <i class="pe-7s-users"></i>
+                    </span>
+          <h2 class="section-header">Community</h2>
+          <p>
+            We stimulate students to engage and learn with other students and developers, in a friendly, relaxed and supportive environment.
+          </p>
+        </div>
+        <div class="col-md-4 objective">
+          <span class="icon">
+                        <i class="pe-7s-users"></i>
+                    </span>
+          <h2 class="section-header">Community</h2>
+          <p>
+            We stimulate students to engage and learn with other students and developers, in a friendly, relaxed and supportive environment.
+          </p>
+        </div>
+        <div class="col-md-4 objective">
+          <span class="icon">
+                        <i class="pe-7s-users"></i>
+                    </span>
+          <h2 class="section-header">Community</h2>
+          <p>
+            We stimulate students to engage and learn with other students and developers, in a friendly, relaxed and supportive environment.
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <!-- NEWS SECTION-->
+    <div class="row" id='news'>
+      <div class="col-md-12">
+        <center>
+          <h1 class="section-header">NEWS AND EVENTS</h1>
+        </center>
+
+        <div class="row news-highlight">
+          <div class="col-md-3">
+            <img src="/img/hackathon.jpg" class="img-responsive">
+          </div>
+          <div class="col-md-9">
+            <h3 class="section-header">QUT CODE Network Hackathon</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam nec ullamcorper arcu. Aenean suscipit purus vitae est bibendum pulvinar. Nullam ut mauris lacinia, aliquam ligula ut, tempor nisi. Sed sit amet sem ullamcorper, venenatis metus vel, sagittis nulla. Pellentesque et orci et sem euismod mollis. Sed turpis dolor, sollicitudin vitae scelerisque eu, blandit vitae augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent ultrices neque in tristique venenatis. Sed in tincidunt eros, eget iaculis diam. Aliquam sodales lobortis ipsum non venenatis. Sed dignissim dui nunc, id volutpat quam ullamcorper et. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse volutpat est quis erat placerat, non dictum urna eleifend.
+            </p>
+            <p>
+              Vestibulum tincidunt bibendum diam eget fermentum. Sed a felis rutrum, pellentesque quam eu, vehicula felis. In accumsan risus sed gravida lacinia. Mauris eu libero eu augue porta iaculis id eu tortor. Quisque pellentesque vel tortor in posuere. Suspendisse porttitor augue at leo efficitur porttitor. Fusce ac neque pretium metus laoreet porttitor id et dui. Nam condimentum pharetra metus a pellentesque. In id tortor non justo viverra finibus sed eu felis. Vestibulum augue ipsum, aliquet eu finibus egestas, tincidunt id lorem.</p>
+          </div>
+        </div>
+        <hr/>
+        <div class="row">
+          <!-- NEWS BLOCKS -->
+          <div class="col-md-3 news-block">
+            <h4 class="section-header">Efficiently unleash cross-media information without cross-media value.</h4>
+            <p class="news-excerpt">Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. [...]
+            </p>
+            <a class="read-more pull-right">Read More</a>
+          </div>
+          <!-- END NEWS BLOCK -->
+          !-- NEWS BLOCKS -->
+          <div class="col-md-3 news-block">
+            <h4 class="section-header">Efficiently unleash cross-media information without cross-media value.</h4>
+            <p class="news-excerpt">Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. [...]
+            </p>
+            <a class="read-more pull-right">Read More</a>
+          </div>
+          <!-- END NEWS BLOCK -->
+          !-- NEWS BLOCKS -->
+          <div class="col-md-3 news-block">
+            <h4 class="section-header">Efficiently unleash cross-media information without cross-media value.</h4>
+            <p class="news-excerpt">Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. [...]
+            </p>
+            <a class="read-more pull-right">Read More</a>
+          </div>
+          <!-- END NEWS BLOCK -->
+          !-- NEWS BLOCKS -->
+          <div class="col-md-3 news-block">
+            <h4 class="section-header">Efficiently unleash cross-media information without cross-media value.</h4>
+            <p class="news-excerpt">Completely synergize resource taxing relationships via premier niche markets. Professionally cultivate one-to-one customer service with robust ideas. [...]
+            </p>
+            <a class="read-more pull-right">Read More</a>
+          </div>
+          <!-- END NEWS BLOCK -->
+        </div>
+      </div>
+
+    </div>
+    <!-- END OF NEWS SECTION-->
+
+    <hr>
+
+    <footer class="text-muted text-center">
+      <p>Made and <a href="https://github.com/joaolucasl/QUTCodeWebsite">open-sourced</a> with <i class="pe-7s-like pe-fw"></i> by QUTCode</p>
+    </footer>
+  </div>
+  <!-- /container -->
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script>
+    //---->  Code for dynamic tabs
+
+    $("ul.tabs").each(function () {
+      var a, b, c = $(this).find("a");
+      a = $(c.filter('[href="' + location.hash + '"]')[0] || c[1]);
+      a.addClass("active");
+      b = $(a[0].hash);
+      c.not(a).each(function () {
+        $(this.hash).hide()
+      });
+      $(this).on("click", "a", function (d) {
+        a.removeClass("active");
+        b.hide();
+        a = $(this);
+        b = $(this.hash);
+        a.addClass("active");
+        b.show();
+        d.preventDefault();
+      })
+    });
+  </script>
 </body>
 
 
